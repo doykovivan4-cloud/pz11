@@ -3,23 +3,28 @@
 using namespace std;
 
 int main() {
-    int a;
-    cin >> a;
+    setlocale(LC_ALL, "Russian");
 
-    // Ваш код:
-if(a>=1 && a<=5)
-    {
-    cout << "Число принадлежит одному из диапазонов";
-}
-else if(a>=10 && a<=15)
-{
-    cout << "Число принадлежит одному из диапазонов";
-}
-    else
-    {
-    cout << "Число не принадлежит указанным диапазонам";    
+   int number;
+    int count = 0;
+
+   
+    cin >> number;
+
+    if (number == 0) {
+        cout << "0" << endl;
+        return 0;
     }
 
+    if (number < 0) {
+        number = -number;
+    }
 
+    while (number > 0) {
+        count = count + 1;
+        number = number / 10;
+    }
+
+    cout << count << endl;
     return 0;
 }
