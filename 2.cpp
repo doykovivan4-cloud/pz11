@@ -1,20 +1,21 @@
 #include <iostream>
 
 using namespace std;
+
 int main() {
-    int number; // Объявляем переменную для хранения числа
-    cin >> number; // Считываем число с клавиатуры
+    setlocale(LC_ALL, "Russian");
 
-    // Ваш код:
-if(number==10)
-{
-cout << "Число равно 10";
-}
-else
-{
-    cout <<"Число не равно 10";
-}
+    int n;
+    cin >> n;
+    int sum = 0;
+    int i = 1;
 
+    while (i <= n) {
+        sum += i;
+        i++;
+      
 
-    return 0; // Завершаем программу
+    }
+  cout << sum << endl;
+    return 0;
 }
