@@ -3,20 +3,24 @@
 using namespace std;
 
 int main() {
-    int a;
-    cin >> a;
+    setlocale(LC_ALL, "Russian");
 
-    // Ваш код:
-if(a>=1 && a<=10)
-{
-    cout << "Число принадлежит диапазону";
-}
-else 
-{
-    cout << "Число не принадлежит диапазону";
-}
+    int N;
+    int factorial = 1;
 
+    
+    cin >> N;
 
+    if (N < 0) {
+        cout << "Факториал для отрицательных чисел не определён." << endl;
+    } else {
+        int i = 1;
+        while (i <= N) {
+            factorial = factorial * i;
+            i = i + 1;
+        }
+        cout << factorial << endl;
+    }
 
     return 0;
 }
