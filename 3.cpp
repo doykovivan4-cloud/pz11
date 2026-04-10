@@ -1,18 +1,19 @@
 #include <iostream>
 
 using namespace std;
+
 int main() {
-    int number;
+    setlocale(LC_ALL, "Russian");
+int number;
+    int sum = 0;
+
     cin >> number;
 
-    // Ваш код
-if(number>=0)
-{
-    cout << "Число не отрицательное";
-}
-else
-{
-cout << "Число отрицательное";
-}
+    while (number != 0) {
+        sum += number;
+        cin >> number;
+    }
+
+    cout << sum << endl;
     return 0;
 }
